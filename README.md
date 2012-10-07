@@ -1,4 +1,1 @@
-AMWA
-====
-
-Atmospheric Monitoring with Arduino
+This repo will contain code for the book Atmospheric Monitoring with Arduino, by Patrick Di Justo and Emily Gertz, forthcoming from O'Reilly Media.
