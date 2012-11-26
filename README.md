@@ -1,1 +1,4 @@
-This repo will contain code for the book Atmospheric Monitoring with Arduino, by Patrick Di Justo and Emily Gertz, forthcoming from O'Reilly Media.
+Atmospheric Monitoring with Arduino is out!  Buy in Ebook and Print at:
+http://shop.oreilly.com/product/0636920026686.do
+
+This repo will contain code for the book.
