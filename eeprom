@@ -1,0 +1,57 @@
+----
+#include <EEPROM.h>
+
+// start reading from the first byte (address 0) of the EEPROM
+
+int address = 1;
+int record = 0; 
+unsigned int Sensor1 = 0;
+unsigned int Sensor2 = 0;
+
+int q;
+int m;
+
+void setup()
+{
+  Serial.begin(9600);
+  Serial.println("Record#, Sensor1, Sensor2");
+  for(int i =0; i<=95; i++)
+  {
+    readData();
+  }
+}
+
+void loop()
+{
+  // There's no need for this program to loop.  We know what we want to do,
+  // and we just did it in setup().
+}
+
+void readData()
+{
+  record = EEPROM.read(address++);
+  Serial.print(record); 
+  Serial.print(",");
+  q = EEPROM.read(address++);
+  delay(20);        
+  m = EEPROM.read(address++);
+  delay(20);        
+  Sensor1 = (q*256)+m;
+
+  Serial.print(Sensor1); 
+  Serial.print(",");
+  q = EEPROM.read(address++);
+  delay(20);        
+  m = EEPROM.read(address++);
+  delay(20);        
+  Sensor2 = (q*256)+m;
+
+  Serial.print(Sensor2); 
+  Serial.print(",");
+  q = EEPROM.read(address++);
+  delay(20);        
+  m = EEPROM.read(address++);
+  delay(20);        
+  
+ }
+----
